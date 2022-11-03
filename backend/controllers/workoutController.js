@@ -64,20 +64,18 @@ const updateWorkout = async (req, res) => {
     const { id } = req.params;
 
     if (!mongoose.Types.ObjectId.isValid(id)) {
-        res.status(404).json({ error: "Workout does not exist." })
+        res.status(404).json({ error: "Workout does not exist." });
     }
 
     const workout = await Workout.updateOne({ _id: id }, { 
-        ...req.body 
+        ...req.body
     });
 
     if (!workout) {
-        res.status(400).json({ error: "Workout does not exist." })
+        res.status(400).json({ error: "Workout does not exist." });
     }
-    res.status(200).json(workout);    
+    res.status(200).json(workout);
 };
-
-
 
 module.exports = {
     addWorkout,
@@ -85,4 +83,4 @@ module.exports = {
     getWorkouts,
     removeWorkout,
     updateWorkout
-}
+};
