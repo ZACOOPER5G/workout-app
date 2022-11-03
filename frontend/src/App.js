@@ -1,9 +1,16 @@
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import './App.css';
 
 function App() {
   return (
     <div className="App">
-      <h1>Workout App</h1>
+      <BrowserRouter>
+        <div className='pages'>
+          <Routes>
+            <Route path="/" element={""} />
+          </Routes>
+        </div>
+      </BrowserRouter>
     </div>
   );
 }
