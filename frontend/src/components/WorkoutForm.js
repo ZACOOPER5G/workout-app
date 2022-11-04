@@ -27,7 +27,7 @@ export const WorkoutForm = () => {
             setLoad('');
             setReps('');
             setError(null);
-            console.log('New workout added!')
+            console.log('New workout added!', json)
         }
     }
 
@@ -52,7 +52,8 @@ export const WorkoutForm = () => {
                 onChange={(e) => setReps(e.target.value)}
                 value={reps}
             />
-            <button onClick="submit" >Add workout</button>
+            <button >Add workout</button>
+            { error && <div className="error">{ error }</div> }
         </form>
     )
-}
+};
