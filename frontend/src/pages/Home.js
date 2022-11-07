@@ -3,10 +3,10 @@ import { useEffect } from "react";
 // components
 import { WorkoutDetails } from "../components/WorkoutDetails";
 import { WorkoutForm } from "../components/WorkoutForm";
-import { useWorkoutContext } from "../hooks/useWorkoutsContext";
+import { useWorkoutsContext } from "../hooks/useWorkoutsContext";
 
 export const Home = () => {
-    const { workouts, dispatch } = useWorkoutContext();
+    const { workouts, dispatch } = useWorkoutsContext();
 
     useEffect(() => {
         const fetchWorkouts = async () => {
@@ -22,7 +22,7 @@ export const Home = () => {
         };
 
         fetchWorkouts()
-    }, []);
+    }, [dispatch]);
 
     return (
         <div className="home" >
