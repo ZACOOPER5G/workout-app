@@ -16,6 +16,7 @@ body {
 header {
   background: #fff;
   position: sticky;
+  box-shadow: 0px 0px 8px #ccc;
 }
 
 header .container {
@@ -25,7 +26,6 @@ header .container {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  box-shadow: 0px 0px 8px #ccc;
 }
 
 header a {
@@ -54,6 +54,10 @@ header a {
   padding: 20px;
   position: relative;
   box-shadow: 0px 0px 8px #ccc;
+}
+
+.workout-details:hover {
+  box-shadow: 0px 0px 15px #ccc;
 }
 
 .workout-details h4 {
@@ -111,4 +115,8 @@ div.error {
   border: 1px solid var(--error);
   border-radius: 4px;
   margin: 20px 0;
+}
+
+input.error {
+  border: 1px solid var(--error);
 }
