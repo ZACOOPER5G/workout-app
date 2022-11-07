@@ -26,7 +26,7 @@ export const WorkoutDetails = ( props ) => {
             <p><strong>Load:</strong> <em>{ props.workout.load }KG</em></p>
             <p><strong>Reps:</strong> <em>{ props.workout.reps }</em></p>
             <p>Posted at { props.workout.createdAt }</p>
-            <span onClick={() => handleClick()}>delete</span>
+            <span className="material-symbols-outlined" onClick={handleClick}>delete</span>
         </div>
     )
 };
