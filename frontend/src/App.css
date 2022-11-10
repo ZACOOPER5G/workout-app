@@ -120,3 +120,20 @@ div.error {
 input.error {
   border: 1px solid var(--error);
 }
+
+.workout-enter {
+  width: 70%;
+}
+.workout-enter-active {
+  width: 90%;
+  transition: width 100ms ease;
+}
+
+.workout-exit {
+  width: 90%;
+}
+
+.workout-exit-active {
+  width: 70%;
+  transition: width 100ms ease-in-out;
+}

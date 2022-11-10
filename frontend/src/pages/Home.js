@@ -1,4 +1,5 @@
 import { useEffect } from "react";
+import { CSSTransition, TransitionGroup } from "react-transition-group";
 
 // components
 import { WorkoutDetails } from "../components/WorkoutDetails";
@@ -26,11 +27,17 @@ export const Home = () => {
 
     return (
         <div className="home" >
-            <div className="workouts" >
-                {workouts && workouts.map((workout) => (
-                    <WorkoutDetails key={workout._id} workout={workout} />
-                ))}
-            </div>
+            <TransitionGroup className="workouts">
+                        {workouts && workouts.map((workout) => (
+                            <CSSTransition  
+                            classNames="workout"
+                            timeout={20}
+                            id={workout._id}
+                        >
+                                <WorkoutDetails key={workout._id} workout={workout} />
+                            </CSSTransition>
+                        ))}
+            </TransitionGroup>
             <WorkoutForm />
         </div>
     )
