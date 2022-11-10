@@ -122,11 +122,11 @@ input.error {
 }
 
 .workout-enter {
-  width: 70%;
+  opacity: 0
 }
 .workout-enter-active {
-  width: 90%;
-  transition: width 100ms ease;
+  opacity: 1;
+  transition: opacity 300ms ease;
 }
 
 .workout-exit {
