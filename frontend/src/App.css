@@ -154,8 +154,22 @@ nav a {
 
 form.signup, form.login {
   max-width: 400px;
-  margin: 40px;
+  margin: 40px auto;
   padding: 20px;
   background: #fff;
   border-radius: 4px;
+}
+
+form.signup button, form.login button {
+  min-width: 80px;
+}
+form.signup button:hover, form.login button:hover {
+  box-shadow: -5px 5px 5px #ccc;
+  transform: translateX(2%) translateY(2%);
+  background-color: #03ab79ae;
+}
+form.signup button:active, form.login button:active {
+  box-shadow: -0px 0px 0px #ccc;
+  transform: translateX(0%) translateY(0%);
+  background-color: #000000;
 }
