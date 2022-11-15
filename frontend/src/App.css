@@ -131,9 +131,31 @@ input.error {
 
 .workout-exit {
   width: 90%;
+  opacity: 1;
 }
 
 .workout-exit-active {
   width: 70%;
+  opacity: 0;
   transition: width 100ms ease-in-out;
+  transition: opacity 100ms ease;
+}
+
+nav {
+  display: flex;
+  align-items: center;
+}
+
+nav a {
+  margin-left: 10px;
+}
+
+/* auth forms */
+
+form.signup, form.login {
+  max-width: 400px;
+  margin: 40px;
+  padding: 20px;
+  background: #fff;
+  border-radius: 4px;
 }
