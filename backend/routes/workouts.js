@@ -4,6 +4,8 @@ const { addWorkout, getWorkout, getWorkouts, removeWorkout, updateWorkout } = re
 const requireAuth = require("../middleware/requireAuth");
 
 const router = express.Router();
+
+// requires authorization for workout routes
 router.use(requireAuth);
 
 // GET all workouts
