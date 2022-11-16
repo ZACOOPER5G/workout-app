@@ -1,10 +1,10 @@
 import { useAuthContext } from './useAuthContext';
 
 export const useLogout = () => {
-    const { state, dispatch } = useAuthContext();
+    const { user, dispatch } = useAuthContext();
 
     const logout = () => {
-        if (state.user) {
+        if (user) {
             // update global state
             dispatch({
                 type: "LOGOUT",
