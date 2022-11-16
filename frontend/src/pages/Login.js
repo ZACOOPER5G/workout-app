@@ -1,22 +1,16 @@
 import { useState } from "react";
-
+import { useLogin } from "../hooks/useLogin";
 
 export const Login = () => {
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
-    const { auth, dispatch } = useAuthContext();
+    const { login, error, isLoading } = useLogin();
 
     const handleSubmit = async (e) => {
         e.preventDefault();
-
-        console.log(email, password)
-
-        // const response = await fetch("/api/user/signup");
-        // const json = await response.json();
-
-        // if (response.ok) {
-
-        // }
+        if (!isLoading) login(email, password);
+        setEmail('');
+        setPassword('');
     };
 
     return (
@@ -26,7 +20,8 @@ export const Login = () => {
             <input type="email" value={email} onChange={(e) => setEmail(e.target.value)} />
             <label>Password</label>
             <input type="password" value={password} onChange={(e) => setPassword(e.target.value)} />
-            <button>Login</button>
+            <button disabledhandleSubmit={handleSubmit} >Login</button>
+            {error && <div className="error">{error}</div>}
         </form>
     )
 };
