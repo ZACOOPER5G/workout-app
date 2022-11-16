@@ -20,7 +20,7 @@ export const Login = () => {
             <input type="email" value={email} onChange={(e) => setEmail(e.target.value)} />
             <label>Password</label>
             <input type="password" value={password} onChange={(e) => setPassword(e.target.value)} />
-            <button disabledhandleSubmit={handleSubmit} >Login</button>
+            <button disabled={isLoading} handleSubmit={handleSubmit} >Login</button>
             {error && <div className="error">{error}</div>}
         </form>
     )
