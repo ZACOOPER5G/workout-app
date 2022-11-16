@@ -20,14 +20,15 @@ export const Navbar = () => {
                 <nav>
                     {/* show login/signup or logout depending on whether user is logged in or not */}
                     {
-                        user === null ? 
+                        user ? 
+                            <div>
+                                <span>{user.user.email} </span>
+                                <button onClick={handleClick} >Logout</button>
+                            </div>
+                        : 
                             <div>
                                 <Link to="/login" >Login</Link>
                                 <Link to="/signup" >Signup</Link>
-                            </div>
-                         : 
-                            <div>
-                                <button onClick={handleClick} >Logout</button>
                             </div>
                     }
                 </nav>
