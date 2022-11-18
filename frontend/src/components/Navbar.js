@@ -8,6 +8,7 @@ export const Navbar = () => {
 
     const handleClick = () => {
         logout();
+        console.log(user)
     };
 
     return (
@@ -21,7 +22,7 @@ export const Navbar = () => {
                     {
                         user ? 
                             <div>
-                                <span>{user && user.email} </span>
+                                <span>{user && user.email || user.user.email} </span>
                                 <button onClick={handleClick} >Logout</button>
                             </div>
                         : 
