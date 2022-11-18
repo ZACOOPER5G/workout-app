@@ -14,7 +14,7 @@ export const Navbar = () => {
         <header>
             <div className="container" >
                 <Link to="/" >
-                    <h1>Workout App</h1>
+                    <h1>Gym Buddy</h1>
                 </Link>
                 <nav>
                     {/* show login/signup or logout depending on whether user is logged in or not */}
