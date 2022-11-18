@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import { useAuthContext} from '../hooks/useAuthContext';
+import { useAuthContext } from '../hooks/useAuthContext';
 import { useLogout } from "../hooks/useLogout";
 
 export const Navbar = () => {
@@ -8,7 +8,6 @@ export const Navbar = () => {
 
     const handleClick = () => {
         logout();
-        user = null;
     };
 
     return (
@@ -22,7 +21,7 @@ export const Navbar = () => {
                     {
                         user ? 
                             <div>
-                                <span>{user.user.email} </span>
+                                <span>{user && user.email} </span>
                                 <button onClick={handleClick} >Logout</button>
                             </div>
                         : 
